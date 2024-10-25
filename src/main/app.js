@@ -8,8 +8,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-//const productRoute = require('../route/product');
+const userRoute = require('../routes/user');
+const notificationRoute = require('../routes/notification');
 
-//app.use(`/product`, productRoute);
+app.use(`/user`, userRoute);
+app.use(`/notification`, notificationRoute);
 
 module.exports = { app };

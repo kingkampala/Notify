@@ -22,7 +22,6 @@ const connectDb = async () => {
     mongoose.connection.on('disconnected', () => {
       console.log('database disconnected :(');
     });
-
   } catch (error) {
     console.error('database connection failed:', error);
     process.exit(1);
